@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Curriculum — AI Critical Thinker Bootcamp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="curriculum.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-icon">◆</span> AI Critical Thinker</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#level1">Level 1</a>
+                <a href="#level2">Level 2</a>
+                <a href="#level3">Level 3</a>
+                <a href="resources.html">Resources</a>
+                <a href="index.html#assessment">Placement Test</a>
+                <a href="index.html#pricing">Pricing</a>
+            </div>
+            <a href="index.html#pricing" class="nav-cta">Enroll Now</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="cur-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">&larr; Back to Home</a>
+            <h1>Full Curriculum Materials</h1>
+            <p class="cur-hero-sub">12 sessions across 3 levels. Every session includes teaching content, hands-on exercises, group discussion prompts, and a graded test case. Click any session to expand the full materials.</p>
+            <div class="cur-hero-format">
+                <div class="format-chip"><strong>45 min</strong> Teaching</div>
+                <div class="format-chip"><strong>45 min</strong> Hands-On</div>
+                <div class="format-chip"><strong>30 min</strong> Discussion</div>
+                <div class="format-chip"><strong>30 min</strong> Test Case</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 1 -->
+    <section class="cur-level" id="level1">
+        <div class="container">
+            <div class="level-header level-1-header">
+                <div class="level-header-badge">Level 1</div>
+                <div>
+                    <h2>Foundation</h2>
+                    <p>Weeks 1–4 &middot; For AI newcomers (Placement score 0–7) &middot; Earns: <strong>AI Aware Certificate</strong></p>
+                </div>
+            </div>
+
+            <!-- Session 1 -->
+            <div class="session-detail" id="session1">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left">
+                        <span class="session-number">01</span>
+                        <div>
+                            <h3>How AI Actually Works</h3>
+                            <span class="session-week">Week 1</span>
+                        </div>
+                    </div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="objectives">
+                        <h4>Learning Objectives</h4>
+                        <ul>
+                            <li>Explain in plain language how large language models generate text</li>
+                            <li>Distinguish between what AI can and cannot do reliably — including the difference between the core model and its connected tools</li>
+                            <li>Identify the three most common misconceptions about AI in business</li>
+                        </ul>
+                    </div>
+
+                    <div class="teaching">
+                        <h4>Teaching Content <span class="time-badge">45 min</span></h4>
+
+                        <div class="topic">
+                            <h5>1. The Prediction Machine</h5>
+                            <p>LLMs predict the most statistically likely next token, thousands of times in sequence. They do not "know" things, search databases, or reason like humans. The core model is a pattern-matching engine trained on massive text data.</p>
+                            <p><strong>Live demo:</strong> Show the same prompt producing different outputs to illustrate probabilistic generation. Ask the AI "What is the capital of France?" (reliable — highly reinforced pattern) vs. "What was the closing price of Apple stock yesterday?" (unreliable — the model has no real-time data without tools).</p>
+                            <p><strong>Key distinction to teach:</strong> Many modern AI tools (ChatGPT, Gemini, Copilot) now have web browsing, code execution, and file-reading capabilities. These are <em>tools connected to the model</em>, not the model itself. The model can call these tools to get real information — but it can still misinterpret, selectively quote, or fabricate details even when the correct source is available. Retrieval does not equal comprehension.</p>
+                        </div>
+
+                        <div class="topic">
+                            <h5>2. What AI Is Good At vs. Bad At</h5>
+                            <p><strong>Strong at:</strong> Summarizing long documents, drafting text in specified formats, translating between common languages, pattern recognition in text, brainstorming and idea generation, explaining concepts, code generation for common patterns.</p>
+                            <p><strong>Weak at:</strong> Precise calculations (though code execution tools help), niche domain facts without verification, anything requiring real-world judgment, predicting future events, understanding organizational context, distinguishing between what is true and what merely sounds true.</p>
+                            <p><strong>Exercise:</strong> Show 5 examples of each. Let participants predict which category each will fall into before revealing the result.</p>
+                        </div>
+
+                        <div class="topic">
+                            <h5>3. The Three Misconceptions</h5>
+                            <div class="callout">
+                                <p><strong>Misconception 1: "AI is always right"</strong> — It is confident, not correct. The model produces text that sounds authoritative regardless of whether it is accurate. Confidence of tone has zero correlation with factual accuracy.</p>
+                                <p><strong>Misconception 2: "AI understands my business"</strong> — It has patterns from training data, not context about your organization, your clients, your market position, or your constraints. Every AI output is generic until you add your context.</p>
+                                <p><strong>Misconception 3: "AI replaces thinking"</strong> — It augments thinking. The moment you stop evaluating AI output is the moment you become liable for whatever it gets wrong. AI shifts the work from creation to evaluation — it does not eliminate the work.</p>
+                            </div>
+                        </div>
+
+                        <div class="topic">
+                            <h5>4. The Model + Tools Architecture</h5>
+                            <p>Modern AI systems are not monolithic — they are a <strong>core language model</strong> connected to <strong>tools</strong>:</p>
+                            <ul>
+                                <li><strong>Web search:</strong> Can retrieve current information, but the model can misread or misquote what it finds</li>
+                                <li><strong>Code execution:</strong> Can run calculations accurately, but the model may set up the wrong calculation</li>
+                                <li><strong>File reading:</strong> Can analyze your documents, but may miss nuance or context</li>
+                                <li><strong>Image generation/analysis:</strong> Can create and describe images, but makes errors in text, counting, and spatial relationships</li>
+                            </ul>
+                            <p><strong>The key lesson:</strong> Tools improve the inputs available to the model. They do not guarantee the outputs. A model with web access can still cite a real article and misrepresent what it says.</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise">
+                        <h4>Hands-On Exercise <span class="time-badge">45 min</span></h4>
+                        <p>Participants open ChatGPT, Claude, or Copilot and complete these 6 tasks. For each task, record what happened and rate the AI's performance (Accurate / Partially accurate / Wrong).</p>
+                        <ol>
+                            <li><strong>Summarization test:</strong> Give the AI a provided 2-page business document. Rate the summary: did it capture the key points? Did it add anything not in the original?</li>
+                            <li><strong>Domain knowledge test:</strong> Ask the AI a factual question about your specific industry that you already know the answer to. Was it correct? Was it specific or generic?</li>
+                            <li><strong>Consistency test:</strong> Ask the same question phrased two different ways. Compare the answers. Are they consistent? If not, what changed?</li>
+                            <li><strong>Current information test:</strong> Ask the AI about something that happened this week in your industry. Does it use web search? If so, does it cite the source correctly? Verify the citation.</li>
+                            <li><strong>Calculation test:</strong> Give the AI a 4-step business math problem (e.g., "If revenue is $2.3M and grows 12% YoY for 3 years, what is the Year 3 revenue?"). Check every step of the work.</li>
+                            <li><strong>Competitive knowledge test:</strong> Ask the AI to list the top 5 competitors in your specific market niche. Verify: are these real companies? Are they actually competitors? Is the list complete or missing obvious ones?</li>
+                        </ol>
+                    </div>
+
+                    <div class="discussion">
+                        <h4>Group Discussion <span class="time-badge">30 min</span></h4>
+                        <ul>
+                            <li>What surprised you most — where AI exceeded expectations, or where it failed?</li>
+                            <li>Did the AI ever get something wrong with total confidence? How did it feel to read that?</li>
+                            <li>How would you explain AI's capabilities and limits to a skeptical colleague in 2 minutes?</li>
+                            <li>Where in your daily work might AI save time? Where would you not trust it?</li>
+                        </ul>
+                    </div>
+
+                    <div class="test-case">
+                        <h4>Test Case 1 <span class="time-badge">30 min</span></h4>
+                        <div class="scenario">
+                            <h5>Scenario</h5>
+                            <p>You receive the following AI-generated executive summary of a quarterly report:</p>
+                            <blockquote>
+                                "Revenue grew 23% year-over-year to $4.2M, driven primarily by expansion in the APAC region which contributed $1.8M. Customer churn decreased from 8.2% to 5.1%, representing the lowest churn rate in company history. The new enterprise tier launched in March saw adoption by 47 accounts in its first month, exceeding the target of 30."
+                            </blockquote>
+                            <p>You are given the actual quarterly data:</p>
+                            <ul>
+                                <li>Revenue: $4.2M (correct), but 19% YoY growth (not 23%)</li>
+                                <li>APAC contribution: $1.1M (not $1.8M)</li>
+                                <li>Churn: decreased from 8.2% to 6.4% (not 5.1%)</li>
+                                <li>Enterprise tier: launched in March (correct), 34 accounts (not 47), target was 30 (correct)</li>
+                            </ul>
+                        </div>
+                        <div class="task">
+                            <h5>Your Task</h5>
+                            <p>Identify every factual error in the AI summary. For each error, state:</p>
+                            <ol>
+                                <li>What the AI said</li>
+                                <li>What the actual figure is</li>
+                                <li>Whether this error would change a business decision if left uncorrected (and why)</li>
+                            </ol>
+                        </div>
+                        <div class="pass-criteria">
+                            <h5>Pass Criteria</h5>
+                            <ul>
+                                <li>Identify all 4 errors</li>
+                                <li>Correctly assess business impact for at least 3 (e.g., the inflated APAC figure could lead to over-investment in that region; the churn improvement is overstated which could mask a retention problem)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="homework">
+                        <h4>Pre-Work for Next Session</h4>
+                        <ul>
+                            <li>Read: <a href="resources.html#cs1" class="hw-link">Case Study 1 — "When AI Got the Numbers Wrong"</a> (8 min)</li>
+                            <li>Watch: <a href="resources.html#video-guides" class="hw-link">Video — "Catching Hallucinations in Real Time"</a> (15 min)</li>
+                            <li>Practice: Use AI to summarize one real document from your work. Compare the summary to the original. Note any discrepancies. (20 min)</li>
+                            <li>Post a reflection in the cohort forum: What is one thing you will do differently after this session? (10 min)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 2 -->
+            <div class="session-detail" id="session2">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left">
+                        <span class="session-number">02</span>
+                        <div>
+                            <h3>The Hallucination Problem</h3>
+                            <span class="session-week">Week 2</span>
+                        </div>
+                    </div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="objectives">
+                        <h4>Learning Objectives</h4>
+                        <ul>
+                            <li>Define AI hallucination and explain why it occurs even in models with web access</li>
+                            <li>Identify 5 common hallucination patterns in business contexts</li>
+                            <li>Apply source verification to any AI-generated claim</li>
+                        </ul>
+                    </div>
+
+                    <div class="teaching">
+                        <h4>Teaching Content <span class="time-badge">45 min</span></h4>
+
+                        <div class="topic">
+                            <h5>1. What Is Hallucination?</h5>
+                            <p>The model generates plausible-sounding content that is factually wrong. It is not lying — it has no concept of truth. It is pattern-matching, and sometimes the pattern produces fiction that reads exactly like fact.</p>
+                            <p><strong>Critical point:</strong> Hallucination is not a bug that will be fixed — it is an inherent property of how language models generate text. Models with web access hallucinate less frequently but still do it, especially when they misquote sources, combine facts from different contexts, or fill gaps with plausible-sounding fabrications.</p>
+                        </div>
+
+                        <div class="topic">
+                            <h5>2. The 5 Hallucination Patterns</h5>
+                            <div class="pattern-grid">
+                                <div class="pattern">
+                                    <h6>Pattern 1: Fabricated Statistics</h6>
+                                    <p>The model invents numbers that sound reasonable: "The global CRM market grew 18.4% in 2025." The percentage sounds specific and authoritative. It may be completely fabricated. Even with web access, the model may pull a real report title but invent the specific figure.</p>
+                                    <p class="pattern-catch"><strong>How to catch:</strong> Any specific number needs a primary source. If you cannot find the exact number in the exact source claimed, it does not exist.</p>
+                                </div>
+                                <div class="pattern">
+                                    <h6>Pattern 2: False Citations</h6>
+                                    <p>The model references papers, articles, reports, or regulations that do not exist — or cites real sources that do not actually say what the model claims they say. Example: "According to McKinsey's 2025 Digital Trust Report..." — the report may be real, but the specific claim attributed to it may not appear anywhere in it.</p>
+                                    <p class="pattern-catch"><strong>How to catch:</strong> Open the cited source. Read the relevant section. Does it actually say what the AI claims? Often it does not.</p>
+                                </div>
+                                <div class="pattern">
+                                    <h6>Pattern 3: Confident Extrapolation</h6>
+                                    <p>The model extends trends beyond what data supports: "At current growth rates, the company will reach $50M revenue by 2028." The model treats a pattern as a certainty, ignoring market saturation, competition, and economic cycles.</p>
+                                    <p class="pattern-catch"><strong>How to catch:</strong> Question any forward projection. What assumptions is it based on? Are those assumptions stated? Would a domain expert make the same projection?</p>
+                                </div>
+                                <div class="pattern">
+                                    <h6>Pattern 4: Entity Confusion</h6>
+                                    <p>The model mixes up companies, people, or products with similar names. Example: confusing Mercury Financial (a credit card company) with Mercury (a banking platform), or attributing one CEO's quote to another.</p>
+                                    <p class="pattern-catch"><strong>How to catch:</strong> Verify every proper noun. Does this company/person/product actually do what the model claims?</p>
+                                </div>
+                                <div class="pattern">
+                                    <h6>Pattern 5: Temporal Errors</h6>
+                                    <p>The model applies old information to current questions, or invents future events. Example: citing a regulation that was proposed but never passed, or describing a product feature that was announced but later cancelled.</p>
+                                    <p class="pattern-catch"><strong>How to catch:</strong> Check dates. Is this information current? Has the situation changed since the model's training data or the article it cited?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="topic">
+                            <h5>3. Real-World Case Studies</h5>
+                            <p>Walk through 5 documented incidents:</p>
+                            <ol>
+                                <li><strong>Legal:</strong> A lawyer used ChatGPT to draft a brief that cited 6 court cases. None of them existed. The lawyer was sanctioned by the court.</li>
+                                <li><strong>Finance:</strong> An AI-generated investment memo included fabricated revenue figures for a competitor, leading to a flawed competitive analysis that reached the investment committee.</li>
+                                <li><strong>Marketing:</strong> An AI produced a competitive analysis with made-up market share percentages, attributed to a Gartner report that did exist but did not contain those numbers.</li>
+                                <li><strong>Healthcare:</strong> An AI medical summary described incorrect drug interactions that could have led to patient harm if not caught by a pharmacist.</li>
+                                <li><strong>Legal/Regulatory:</strong> An AI-generated compliance memo cited a regulation that had been proposed in 2023 but was never enacted, advising the company to comply with a non-existent rule.</li>
+                            </ol>
+                        </div>
+
+                        <div class="topic">
+                            <h5>4. The Source Verification Habit</h5>
+                            <p>One rule that prevents most hallucination damage:</p>
+                            <div class="callout callout-important">
+                                <p><strong>Before using any AI-generated fact in your work:</strong> Can I find this specific claim in a primary source? If I cannot, it does not go in my deliverable. No exceptions.</p>
+                            </div>
+                            <p>This takes 30 seconds per claim for common facts (a quick search) and 2-5 minutes for specific statistics or citations. It is the single highest-ROI habit in AI-assisted work.</p>
+                        </div>
+                    </div>
+
+                    <div class="exercise">
+                        <h4>Hands-On Exercise: The Hallucination Hunt <span class="time-badge">45 min</span></h4>
+                        <p>Participants receive <strong>10 AI-generated paragraphs</strong> on business topics. Each paragraph contains 0-3 hallucinated claims mixed with accurate information. The challenge is to separate fact from fiction.</p>
+                        <p><strong>Instructions:</strong></p>
+                        <ol>
+                            <li>Read each paragraph carefully</li>
+                            <li>Flag every claim you suspect is hallucinated (highlight or underline)</li>
+                            <li>Use the provided reference materials to verify or debunk each flagged claim</li>
+                            <li>For each flag, write: "Confirmed hallucination" or "False alarm — verified as accurate"</li>
+                        </ol>
+                        <p><strong>Scoring:</strong></p>
+                        <ul>
+                            <li>Correct flag (caught a real hallucination): +1 point</li>
+                            <li>Missed hallucination (did not flag a fabricated claim): -1 point</li>
+                            <li>False alarm (flagged something that was actually true): -0.5 points</li>
+                        </ul>
+                        <p><strong>Target score:</strong> 7+ out of a possible 12 on your first attempt. By the end of the bootcamp, you should score 10+.</p>
+                    </div>
+
+                    <div class="discussion">
+                        <h4>Group Discussion <span class="time-badge">30 min</span></h4>
+                        <ul>
+                            <li>Which hallucination patterns were hardest to catch? Why?</li>
+                            <li>Did anyone flag something as a hallucination that turned out to be true? What made it look suspicious?</li>
+                            <li>In your professional domain, what would be the consequences of an undetected hallucination reaching a client or a decision-maker?</li>
+                            <li>What verification habits can you realistically build into your daily workflow without adding significant time?</li>
+                        </ul>
+                    </div>
+
+                    <div class="test-case">
+                        <h4>Test Case 2 <span class="time-badge">30 min</span></h4>
+                        <div class="scenario">
+                            <h5>Scenario</h5>
+                            <p>Your manager asks you to use AI to draft a competitive analysis. The AI produces:</p>
+                            <blockquote>
+                                "According to Gartner's 2025 Magic Quadrant for CRM platforms, Salesforce maintained its leadership position with a 31.4% market share, followed by HubSpot at 18.7% and Microsoft Dynamics at 14.2%. Notably, a new entrant, CloudReach CRM, captured 6.3% market share within its first year, making it the fastest-growing CRM platform in the quadrant's history."
+                            </blockquote>
+                            <p><strong>Reference information provided:</strong></p>
+                            <ul>
+                                <li>Gartner Magic Quadrants evaluate vendors on "ability to execute" and "completeness of vision" — they do <em>not</em> publish market share percentages</li>
+                                <li>Salesforce is consistently a Leader in the CRM Magic Quadrant (verifiable)</li>
+                                <li>HubSpot is typically in the CRM Magic Quadrant but not always in the enterprise segment</li>
+                                <li>No company called "CloudReach CRM" appears in any industry database or Gartner publication</li>
+                            </ul>
+                        </div>
+                        <div class="task">
+                            <h5>Your Task</h5>
+                            <p>Write a memo to your manager (max 200 words) explaining:</p>
+                            <ol>
+                                <li>Which claims in the AI output are verifiable, which are likely hallucinated, and which are a mix (real source, fabricated details)</li>
+                                <li>What you would use from this output and what you would discard</li>
+                                <li>How you would complete the competitive analysis reliably — what sources would you actually use?</li>
+                            </ol>
+                        </div>
+                        <div class="pass-criteria">
+                            <h5>Pass Criteria</h5>
+                            <ul>
+                                <li>Correctly identifies that Magic Quadrants do not publish market share percentages (fabricated detail on a real source)</li>
+                                <li>Flags "CloudReach CRM" as likely fabricated</li>
+                                <li>Notes HubSpot's positioning may be inaccurate for the enterprise segment</li>
+                                <li>Proposes credible alternative sources (actual Gartner reports, IDC data, company filings, industry analyst reports)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="homework">
+                        <h4>Pre-Work for Next Session</h4>
+                        <ul>
+                            <li>Read: <a href="resources.html#cs2" class="hw-link">Case Study 2 — "The Citation That Didn't Exist"</a> (7 min)</li>
+                            <li>Read: <a href="resources.html#cs3" class="hw-link">Case Study 3 — "The Confident Forecast"</a> (7 min)</li>
+                            <li>Watch: <a href="resources.html#video-guides" class="hw-link">Video — "The 5-Point Evaluation Framework Walkthrough"</a> (10 min)</li>
+                            <li>Practice: Ask AI to write a 1-paragraph industry analysis for your sector. Identify at least one claim to verify. Check it. (20 min)</li>
+                            <li>Post to the forum: Share the claim you verified and what you found. (10 min)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 3 -->
+            <div class="session-detail" id="session3">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left">
+                        <span class="session-number">03</span>
+                        <div>
+                            <h3>The Evaluation Framework</h3>
+                            <span class="session-week">Week 3</span>
+                        </div>
+                    </div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="objectives">
+                        <h4>Learning Objectives</h4>
+                        <ul>
+                            <li>Apply a 5-point evaluation framework to any AI output</li>
+                            <li>Rate AI outputs on a confidence scale with written justification</li>
+                            <li>Build evaluation into a daily workflow without adding significant time</li>
+                        </ul>
+                    </div>
+
+                    <div class="teaching">
+                        <h4>Teaching Content <span class="time-badge">45 min</span></h4>
+
+                        <div class="topic">
+                            <h5>The 5-Point AI Output Evaluation Framework</h5>
+                            <p>This is the core methodology of the entire bootcamp. Every session from here forward builds on this framework.</p>
+
+                            <div class="framework-grid">
+                                <div class="framework-item">
+                                    <div class="fw-number">1</div>
+                                    <div>
+                                        <h6>Source Verification</h6>
+                                        <p>Can I trace this claim to a primary source?</p>
+                                        <p class="fw-scores"><strong>Verified</strong> (source found, matches) · <strong>Unverified</strong> (no source found) · <strong>Contradicted</strong> (source found, disagrees)</p>
+                                    </div>
+                                </div>
+                                <div class="framework-item">
+                                    <div class="fw-number">2</div>
+                                    <div>
+                                        <h6>Logical Consistency</h6>
+                                        <p>Does the output contradict itself? Do the numbers add up? Does the conclusion follow from the evidence?</p>
+                                        <p class="fw-scores"><strong>Consistent</strong> · <strong>Minor gaps</strong> · <strong>Contradictory</strong></p>
+                                    </div>
+                                </div>
+                                <div class="framework-item">
+                                    <div class="fw-number">3</div>
+                                    <div>
+                                        <h6>Domain Plausibility</h6>
+                                        <p>Based on my professional knowledge, does this make sense for my industry, market, and context?</p>
+                                        <p class="fw-scores"><strong>Plausible</strong> · <strong>Questionable</strong> · <strong>Implausible</strong></p>
+                                    </div>
+                                </div>
+                                <div class="framework-item">
+                                    <div class="fw-number">4</div>
+                                    <div>
+                                        <h6>Statistical Validity</h6>
+                                        <p>Are the numbers reasonable? Are percentages, growth rates, and comparisons mathematically sound?</p>
+                                        <p class="fw-scores"><strong>Valid</strong> · <strong>Suspect</strong> · <strong>Invalid</strong></p>
+                                    </div>
+                                </div>
+                                <div class="framework-item">
+                                    <div class="fw-number">5</div>
+                                    <div>
+                                        <h6>Recency & Relevance</h6>
+                                        <p>Is this information current enough for my purpose? Could it be outdated even if the model has web access?</p>
+                                        <p class="fw-scores"><strong>Current</strong> · <strong>Possibly outdated</strong> · <strong>Likely outdated</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="topic">
+                            <h5>Overall Confidence Rating</h5>
+                            <div class="confidence-grid">
+                                <div class="confidence-level high">
+                                    <h6>High Confidence</h6>
+                                    <p>All 5 criteria pass. Safe to use with light editing. Still spot-check one key claim.</p>
+                                </div>
+                                <div class="confidence-level medium">
+                                    <h6>Medium Confidence</h6>
+                                    <p>3-4 criteria pass. Use with caveats. Verify the failed criteria before presenting to stakeholders.</p>
+                                </div>
+                                <div class="confidence-level low">
+                                    <h6>Low Confidence</h6>
+                                    <p>2 or fewer pass. Do not use without substantial independent research. The AI output is a starting point, not a deliverable.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exercise">
+                        <h4>Hands-On Exercise <span class="time-badge">45 min</span></h4>
+                        <p>Participants receive 5 AI-generated business documents. For each:</p>
+                        <ol>
+                            <li>Complete the 5-point evaluation framework worksheet</li>
+                            <li>Assign a confidence rating (High / Medium / Low)</li>
+                            <li>Write a 2-sentence recommendation: use as-is / use with caveats / do not use</li>
+                        </ol>
+                        <p><strong>The 5 documents:</strong></p>
+                        <ul>
+                            <li>A market analysis for a SaaS product entering the healthcare sector</li>
+                            <li>A risk assessment for opening a new office in Singapore</li>
+                            <li>A project proposal summary for an IT infrastructure upgrade</li>
+                            <li>A customer insight report based on survey data</li>
+                            <li>A draft company policy on remote work</li>
+                        </ul>
+                    </div>
+
+                    <div class="discussion">
+                        <h4>Group Discussion <span class="time-badge">30 min</span></h4>
+                        <ul>
+                            <li>Share your confidence ratings. Where did the group agree? Where did you disagree?</li>
+                            <li>Which of the 5 criteria was hardest to evaluate? Why?</li>
+                            <li>How long did the evaluation take per document? Is this realistic for daily use?</li>
+                            <li>What shortcuts can you take for low-stakes work vs. high-stakes work?</li>
+                        </ul>
+                    </div>
+
+                    <div class="test-case">
+                        <h4>Test Case 3 <span class="time-badge">30 min</span></h4>
+                        <div class="scenario">
+                            <h5>Scenario</h5>
+                            <p>You used AI to generate a risk assessment for a new market entry into Southeast Asia:</p>
+                            <blockquote>
+                                "The Indonesian digital payments market reached $38B in 2025 (Source: McKinsey Global Payments Report 2025), growing at 27% CAGR. Regulatory requirements include obtaining an e-money license from Bank Indonesia, which typically takes 6-8 months. Key risks include currency volatility (IDR depreciated 12% against USD in 2025), competition from GoPay (62% market share) and OVO (24% market share), and infrastructure gaps in rural areas where internet penetration is 43%."
+                            </blockquote>
+                        </div>
+                        <div class="task">
+                            <h5>Your Task</h5>
+                            <p>Complete the full 5-point evaluation framework for this paragraph. For each criterion:</p>
+                            <ol>
+                                <li>Assign your score (Verified/Unverified/Contradicted, etc.)</li>
+                                <li>Write a 1-2 sentence justification</li>
+                            </ol>
+                            <p>Then: assign an overall confidence rating and state what you would verify before including this in a board presentation.</p>
+                        </div>
+                        <div class="pass-criteria">
+                            <h5>Pass Criteria</h5>
+                            <ul>
+                                <li>Correctly flags that the McKinsey report citation needs verification (may or may not exist; specific figures need checking)</li>
+                                <li>Notes that market share figures for GoPay/OVO need current verification (market is rapidly changing)</li>
+                                <li>Flags the 12% currency depreciation as needing a specific date range check</li>
+                                <li>Assigns Medium or Low confidence with sound reasoning</li>
+                                <li>States specific verification steps, not generic "needs more research"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session 4 -->
+            <div class="session-detail" id="session4">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left">
+                        <span class="session-number">04</span>
+                        <div>
+                            <h3>Smart Prompting for Business</h3>
+                            <span class="session-week">Week 4 — Level 1 Final</span>
+                        </div>
+                    </div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="objectives">
+                        <h4>Learning Objectives</h4>
+                        <ul>
+                            <li>Use 4 prompt frameworks for different business scenarios</li>
+                            <li>Decompose complex problems into structured AI-assisted steps</li>
+                            <li>Recognize when a problem should NOT be given to AI</li>
+                        </ul>
+                    </div>
+
+                    <div class="teaching">
+                        <h4>Teaching Content <span class="time-badge">45 min</span></h4>
+
+                        <div class="topic">
+                            <h5>Four Prompt Frameworks</h5>
+
+                            <div class="framework-card">
+                                <h6>1. BAB (Before-After-Bridge)</h6>
+                                <p><strong>For:</strong> Problem-solving, process improvement, gap analysis</p>
+                                <p><strong>Structure:</strong> "Here is the current situation [Before]. Here is where we need to be [After]. Help me build the plan to get there [Bridge]."</p>
+                                <p><strong>Example:</strong> "Before: Our customer onboarding takes 14 days and we lose 30% of new signups before completion. After: Onboarding completed in 5 days with less than 10% drop-off. Bridge: What process changes, automations, and communication improvements would close this gap?"</p>
+                            </div>
+
+                            <div class="framework-card">
+                                <h6>2. COAST (Context-Objective-Actions-Scenario-Task)</h6>
+                                <p><strong>For:</strong> Strategic planning, scenario analysis, market entry decisions</p>
+                                <p><strong>Structure:</strong> Provide full context, state the objective, list possible actions, describe scenario constraints, assign the task.</p>
+                                <p><strong>Example:</strong> "Context: We are a 200-person B2B SaaS company with $15M ARR, primarily serving North American clients. Objective: Evaluate entering the European market. Actions we're considering: direct sales, partnerships, or acquisition. Scenario: We have $3M to invest, 12-month timeline, and must be GDPR compliant. Task: Build a decision framework comparing these three approaches."</p>
+                            </div>
+
+                            <div class="framework-card">
+                                <h6>3. Chain-of-Thought</h6>
+                                <p><strong>For:</strong> Analytical problems, financial analysis, root cause analysis</p>
+                                <p><strong>Structure:</strong> "Think through this step by step" or "Show your reasoning at each stage."</p>
+                                <p><strong>Example:</strong> "Our Q3 revenue came in 12% below forecast. Walk me through step by step: what are the possible drivers of a revenue miss of this size? For each driver, what data would I look at to confirm or rule it out?"</p>
+                            </div>
+
+                            <div class="framework-card">
+                                <h6>4. Decomposition</h6>
+                                <p><strong>For:</strong> Complex business cases, due diligence, competitive analysis</p>
+                                <p><strong>Structure:</strong> Break the big question into 5-7 smaller questions. Ask AI each one separately. Synthesize the answers yourself.</p>
+                                <p><strong>Example:</strong> Instead of "Should we acquire CompetitorX?" → Break into: What is their revenue and growth trajectory? What is their technology stack and IP? What is the cultural fit risk? What are the regulatory implications? What would integration cost? What synergies are realistic? Ask each separately, evaluate each answer, synthesize your own recommendation.</p>
+                            </div>
+                        </div>
+
+                        <div class="topic">
+                            <h5>When NOT to Use AI</h5>
+                            <div class="callout callout-warning">
+                                <ul>
+                                    <li><strong>Legal liability:</strong> Decisions with legal consequences unless output is reviewed by qualified counsel</li>
+                                    <li><strong>Confidential data:</strong> Anything requiring data you cannot share with the tool (check your company's AI policy and the tool's data handling terms)</li>
+                                    <li><strong>Error cost exceeds time saved:</strong> When the business cost of an undetected AI error is greater than the time you would save</li>
+                                    <li><strong>Cannot evaluate output:</strong> When you do not have the domain knowledge to judge whether the AI's answer is right or wrong</li>
+                                    <li><strong>Emotional/relational decisions:</strong> Delivering difficult feedback, managing a team conflict, handling a sensitive client situation — AI can help you prepare, but the human delivery and judgment are irreplaceable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="exercise">
+                        <h4>Hands-On Exercise <span class="time-badge">45 min</span></h4>
+                        <p>3 business problems, each requiring a different prompt framework. For each:</p>
+                        <ol>
+                            <li>Choose the right framework and explain why</li>
+                            <li>Write and execute the prompt</li>
+                            <li>Evaluate the output using the Session 3 framework</li>
+                            <li>Improve the output with a follow-up prompt</li>
+                        </ol>
+                        <p><strong>The problems:</strong></p>
+                        <ul>
+                            <li><strong>Problem 1 (BAB):</strong> Your team's customer support response time averages 4 hours. The target is under 1 hour. Build a reduction plan.</li>
+                            <li><strong>Problem 2 (COAST):</strong> Your company is considering launching a subscription tier for a product currently sold as a one-time purchase. Build a scenario analysis.</li>
+                            <li><strong>Problem 3 (Decomposition):</strong> Your CEO wants to know whether opening a second office in another city makes sense. Break into sub-questions and research each.</li>
+                        </ul>
+                    </div>
+
+                    <div class="test-case">
+                        <h4>Test Case 4 — Level 1 Final <span class="time-badge">30 min</span></h4>
+                        <div class="scenario">
+                            <h5>Scenario</h5>
+                            <p>Your director asks you to prepare a 1-page brief on whether the company should adopt AI-powered customer service chatbots. You must use AI to help, but the brief must be reliable enough for a leadership meeting.</p>
+                        </div>
+                        <div class="task">
+                            <h5>Your Task</h5>
+                            <ol>
+                                <li>Write the prompts you would use (minimum 2 different frameworks)</li>
+                                <li>Generate the AI output (live, during the test)</li>
+                                <li>Evaluate the output using the 5-point framework</li>
+                                <li>Write the final 1-page brief, clearly marking: verified claims, unverified claims, and your own analysis</li>
+                                <li>Include a 3-sentence "confidence statement" at the bottom</li>
+                            </ol>
+                        </div>
+                        <div class="pass-criteria">
+                            <h5>Pass Criteria</h5>
+                            <ul>
+                                <li>Uses at least 2 prompt frameworks appropriately</li>
+                                <li>Applies the evaluation framework to the AI output</li>
+                                <li>Final brief clearly distinguishes verified vs. unverified claims</li>
+                                <li>Confidence statement is honest and specific (not "this is mostly accurate")</li>
+                                <li>Brief is suitable for a leadership audience — professional, balanced, actionable</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="certification-box">
+                        <h4>Level 1 Certification: AI Aware Certificate</h4>
+                        <p><strong>Requirements:</strong> Attend 3 of 4 sessions. Pass 3 of 4 test cases (Test Case 4 must be one). Demonstrates: understanding of AI mechanics, hallucination detection, evaluation framework application, and responsible AI-assisted work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 2 placeholder — will be expanded -->
+    <section class="cur-level" id="level2">
+        <div class="container">
+            <div class="level-header level-2-header">
+                <div class="level-header-badge" style="background: rgba(16,185,129,0.15); color: #34d399;">Level 2</div>
+                <div>
+                    <h2>Practitioner</h2>
+                    <p>Weeks 5–8 &middot; For AI-literate professionals (Placement score 8–14) &middot; Earns: <strong>AI Practitioner Certificate</strong></p>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session5">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">05</span><div><h3>The Override Decision</h3><span class="session-week">Week 5</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="objectives"><h4>Learning Objectives</h4><ul><li>Apply a 4-level decision framework: Trust / Verify / Modify / Reject</li><li>Identify the 3 factors that determine the right override level (stakes, reversibility, expertise)</li><li>Practice making override decisions under time pressure</li></ul></div>
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>The Override Decision Tree</h5><p>Every AI output demands one of four responses:</p><div class="override-grid"><div class="override-level trust"><h6>Trust</h6><p>Use as-is with light editing. When: all 5 evaluation criteria pass, stakes are low, output aligns with domain knowledge.</p></div><div class="override-level verify"><h6>Verify</h6><p>Use after checking specific claims. When: 3-4 criteria pass, 1-2 claims need source verification. <strong>Most business AI use should land here.</strong></p></div><div class="override-level modify"><h6>Modify</h6><p>Keep the structure, replace specific content. When: framework is sound but facts, numbers, or recommendations need correction based on your expertise.</p></div><div class="override-level reject"><h6>Reject</h6><p>Do not use. Start over manually. When: fundamental logic flaws, critical factual errors, or misunderstood problem.</p></div></div></div><div class="topic"><h5>The 3 Factors</h5><ul><li><strong>Stakes:</strong> What is the cost of an undetected error? Low = internal draft. High = board presentation, legal filing, client commitment.</li><li><strong>Reversibility:</strong> Can the decision be undone? Reversible = internal process change. Irreversible = public statement, contract clause, hiring decision.</li><li><strong>Your expertise:</strong> How well can YOU evaluate this specific output? High = your core domain. Low = unfamiliar territory.</li></ul><p><strong>Rule:</strong> When stakes are high, reversibility is low, or expertise is limited — move UP the override ladder (from Trust toward Reject).</p></div></div>
+                    <div class="exercise"><h4>Hands-On Exercise: Speed Override Drill <span class="time-badge">45 min</span></h4><p>12 AI outputs in rapid succession (one every 3-4 minutes). For each: read (1 min), assign Trust/Verify/Modify/Reject (30 sec), justify in one sentence (1 min), compare with facilitator's answer (1-2 min).</p><p>Outputs span: marketing email, financial projection, legal clause, hiring recommendation, customer complaint response, risk assessment, meeting summary, product roadmap suggestion, competitive analysis, policy draft, data interpretation, strategic recommendation.</p></div>
+                    <div class="test-case"><h4>Test Case 5 <span class="time-badge">30 min</span></h4><div class="scenario"><h5>Scenario</h5><p>Three AI outputs for a quarterly business review. Output A flags employees as attrition risks based on behavioral data. Output B recommends budget actions based on cost projections. Output C claims competitors are poaching your clients.</p></div><div class="pass-criteria"><h5>Pass Criteria</h5><ul><li>Identifies ethical concerns in Output A (behavioral surveillance)</li><li>Output B: Verify financial figures but structure is usable</li><li>Output C: Client defection claims need urgent verification</li><li>Override decisions match the stakes analysis for each</li></ul></div></div>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session6">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">06</span><div><h3>Red Team Thinking</h3><span class="session-week">Week 6</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>The Red Team Framework — 6 Attack Vectors</h5><div class="attack-grid"><div class="attack"><h6>1. Source Attack</h6><p>Are the cited sources real? Current? The best sources for this claim?</p></div><div class="attack"><h6>2. Logic Attack</h6><p>Does the conclusion follow from the evidence? False causation? Circular reasoning?</p></div><div class="attack"><h6>3. Completeness Attack</h6><p>What is missing? Which perspectives, data, risks, or stakeholders are absent?</p></div><div class="attack"><h6>4. Bias Attack</h6><p>Does the output favor one side? Reflect training biases? Tell the user what they want to hear?</p></div><div class="attack"><h6>5. Context Attack</h6><p>Does it account for your specific industry, geography, company size, culture, timing?</p></div><div class="attack"><h6>6. Adversarial Stress Test</h6><p>If a hostile critic read this, what would they attack first? What is the weakest claim?</p></div></div></div></div>
+                    <div class="exercise"><h4>Hands-On Exercise: Red Team / Blue Team <span class="time-badge">45 min</span></h4><p>Pairs receive an AI-generated market entry strategy. Round 1 (20 min): Person A defends, Person B attacks using the 6 vectors. Round 2 (15 min): switch roles on a different strategy. Debrief (10 min): share strongest attacks.</p></div>
+                    <div class="test-case"><h4>Test Case 6 <span class="time-badge">30 min</span></h4><div class="scenario"><h5>Scenario</h5><p>AI recommends transitioning from perpetual licensing to subscription pricing, citing "47 SaaS companies" that saw 34% average revenue increase. Write a 300-400 word Red Team critique using all 6 vectors.</p></div><div class="pass-criteria"><h5>Pass Criteria</h5><ul><li>Identifies 5+ substantive weaknesses across the 6 vectors</li><li>Concludes with nuanced position — not blanket rejection, but conditional approval with specific requirements</li></ul></div></div>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session7">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">07</span><div><h3>Domain-Applied AI Judgment</h3><span class="session-week">Week 7</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>Domain-Specific AI Traps</h5><ul><li><strong>Finance:</strong> Fabricates ratios, invents trend data, applies wrong benchmarks, gets tax/regulatory details wrong per jurisdiction</li><li><strong>HR/People:</strong> Reflects hiring biases, generates non-compliant policy language, produces unvalidated competency frameworks</li><li><strong>Marketing:</strong> Fabricates market sizes, invents consumer research citations, produces generic strategies</li><li><strong>Operations:</strong> Underestimates implementation complexity, ignores organizational resistance, misapplies cross-industry benchmarks</li><li><strong>Legal:</strong> Cites non-existent regulations, mixes jurisdictions, generates unenforceable contract language</li></ul></div><div class="topic"><h5>Your Personal AI Checklist</h5><p>Each participant drafts a 10-point checklist specific to their domain: the 10 things they will ALWAYS verify when using AI in their professional context.</p></div></div>
+                    <div class="exercise"><h4>Hands-On Exercise: Domain Deep Dive <span class="time-badge">45 min</span></h4><p>Groups by professional function. Each group evaluates an AI-generated deliverable for their field using both the general framework AND domain expertise. Present findings to the full cohort.</p></div>
+                    <div class="test-case"><h4>Test Case 7 <span class="time-badge">30 min</span></h4><div class="pass-criteria"><h5>Pass Criteria</h5><ul><li>Demonstrates domain-specific evaluation beyond the general framework</li><li>Identifies 3+ issues requiring specialized knowledge to catch</li><li>Produces professional-grade output a real manager could act on</li></ul></div></div>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session8">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">08</span><div><h3>Communicating AI-Informed Decisions</h3><span class="session-week">Week 8 — Level 2 Final</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>The Communication Framework</h5><ol><li><strong>Lead with the decision, not the tool.</strong> "Our analysis indicates X" — not "The AI says X."</li><li><strong>Disclose the method when relevant.</strong> "We used AI-assisted analysis, validated against [sources]."</li><li><strong>Quantify your confidence.</strong> High/moderate/low with specific reasons for each.</li><li><strong>Name what you don't know.</strong> "This does not account for [X] because reliable data is not available."</li><li><strong>Prepare for the skeptic.</strong> Have answers for: "How do you know the AI didn't make this up?"</li></ol></div></div>
+                    <div class="exercise"><h4>Hands-On Exercise: The Boardroom Simulation <span class="time-badge">45 min</span></h4><p>Each participant takes an AI analysis from an earlier session and delivers a 3-minute executive presentation. Facilitator and peers play the board, asking tough questions. Scored on clarity, uncertainty language, handling skepticism, and owning the recommendation.</p></div>
+                    <div class="test-case"><h4>Test Case 8 — Level 2 Final <span class="time-badge">30 min</span></h4><div class="pass-criteria"><h5>Pass Criteria</h5><ul><li>Hallucination correctly identified and excluded from brief</li><li>Executive brief is professional with no unverified claims presented as fact</li><li>Confidence appendix is specific and honest</li><li>Anticipated answers demonstrate ownership without hiding methodology</li></ul></div></div>
+                    <div class="certification-box"><h4>Level 2 Certification: AI Practitioner Certificate</h4><p><strong>Requirements:</strong> Attend 3 of 4 sessions. Pass 3 of 4 test cases (Test Case 8 must be one). Demonstrates: override judgment, adversarial evaluation, domain-specific AI assessment, and stakeholder communication.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level 3 -->
+    <section class="cur-level" id="level3">
+        <div class="container">
+            <div class="level-header level-3-header">
+                <div class="level-header-badge" style="background: rgba(245,158,11,0.15); color: #fbbf24;">Level 3</div>
+                <div>
+                    <h2>Advanced</h2>
+                    <p>Weeks 9–12 &middot; For AI-experienced leaders (Placement score 15–20) &middot; Earns: <strong>AI Critical Thinker Certificate</strong></p>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session9">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">09</span><div><h3>Designing AI-Augmented Workflows</h3><span class="session-week">Week 9</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>The Workflow Architecture Method</h5><ol><li><strong>Map the current process</strong> — every step, decision point, handoff</li><li><strong>Classify each step:</strong> AI-suitable (high volume, pattern-based, low stakes) · Human-required (high stakes, novel, ethical) · AI-assisted, human-decided (AI prepares, human decides)</li><li><strong>Insert checkpoints:</strong> Who reviews, what they check, how long they have, what triggers escalation</li><li><strong>Build feedback loops:</strong> How does the reviewer flag errors back to improve the process?</li></ol></div><div class="topic"><h5>The 3 Workflow Design Mistakes</h5><ul><li><strong>Over-automation:</strong> Automating decisions that need human judgment because "the AI is usually right"</li><li><strong>Rubber-stamp checkpoints:</strong> A human "reviews" but never actually changes anything — compliance theater</li><li><strong>Missing escalation paths:</strong> No process for when AI produces something the reviewer cannot evaluate</li></ul></div></div>
+                    <div class="test-case"><h4>Test Case 9 <span class="time-badge">30 min</span></h4><div class="scenario"><h5>Scenario</h5><p>Redesign a consulting firm's 7-step, 19-hour proposal process to under 8 hours using AI. Must include checkpoints, escalation triggers, and risk statement. Cannot fully automate partner decisions or final approval.</p></div></div>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session10">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">10</span><div><h3>AI Governance & Policy</h3><span class="session-week">Week 10</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>7 Components of a Practical AI Use Policy</h5><ol><li><strong>Approved tools and purposes</strong></li><li><strong>Data classification matrix</strong> — public (any tool), internal (enterprise tools only), confidential (never external AI)</li><li><strong>Human review requirements</strong> — low stakes (self-review), medium (peer), high (senior + documentation)</li><li><strong>Prohibited use cases</strong> — where AI must not be used, period</li><li><strong>Disclosure requirements</strong> — when to tell clients/regulators AI was used</li><li><strong>Incident reporting</strong> — what to do when AI errors reach clients or cause impact</li><li><strong>Training requirements</strong> — who must complete AI training before using tools for work</li></ol></div></div>
+                    <div class="test-case"><h4>Test Case 10 <span class="time-badge">30 min</span></h4><div class="scenario"><h5>Scenario</h5><p>5 AI incident scenarios: data leak to public chatbot, AI-only hiring decision, fabricated testimonial published, unreviewed legal compliance checklist, hallucinated board meeting action item. Classify severity, identify policy gaps, write responses.</p></div></div>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session11">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">11</span><div><h3>Capstone Preparation</h3><span class="session-week">Week 11</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Teaching Content <span class="time-badge">45 min</span></h4><div class="topic"><h5>The Capstone Must Answer 6 Questions</h5><ol><li><strong>The Problem:</strong> What business problem? Why does it matter? Current cost/impact?</li><li><strong>The AI Approach:</strong> Which tools, which tasks, what outputs?</li><li><strong>The Human Role:</strong> Where do humans decide? What checkpoints?</li><li><strong>The Validation Plan:</strong> How will you know AI output is correct?</li><li><strong>The Override Protocol:</strong> When override? What triggers escalation? Fallback?</li><li><strong>What Can Go Wrong:</strong> Top 3 risks, likelihood, mitigation</li></ol></div></div>
+                    <div class="test-case"><h4>Test Case 11 <span class="time-badge">30 min</span></h4><div class="pass-criteria"><h5>Pass Criteria</h5><ul><li>Problem is real and specific (not generic)</li><li>AI application is appropriate</li><li>Human checkpoints are meaningful</li><li>Override protocol has clear triggers</li><li>At least one risk acknowledges the AI approach might not work</li></ul></div></div>
+                </div>
+            </div>
+
+            <div class="session-detail" id="session12">
+                <button class="session-toggle" onclick="toggleSession(this)">
+                    <div class="session-toggle-left"><span class="session-number">12</span><div><h3>Capstone Presentation & Certification</h3><span class="session-week">Week 12 — Final</span></div></div>
+                    <span class="toggle-icon">+</span>
+                </button>
+                <div class="session-body">
+                    <div class="teaching"><h4>Session Structure <span class="time-badge">2.5 hours</span></h4><div class="topic"><h5>Part 1: Capstone Presentations (90 min)</h5><p>8-minute presentation + 5-minute Q&A per participant. Graded on: problem framing, AI application, critical evaluation, human oversight design, communication quality. Pass: average 3.0/5, no criterion below 2.</p></div><div class="topic"><h5>Part 2: Peer Review (30 min)</h5><p>Each participant reviews 2 other capstones: strongest element, one unaddressed weakness, 5-point rubric rating, recommendation (Approve / Approve with revisions / Revise and resubmit).</p></div><div class="topic"><h5>Part 3: Certification Ceremony (30 min)</h5><p>Pass/fail results. Group reflection. Digital badges and PDF certificates awarded. Alumni community invitation.</p></div></div>
+                    <div class="certification-box"><h4>Level 3 Certification: AI Critical Thinker Certificate</h4><p><strong>Requirements:</strong> Attend 3 of 4 sessions (Session 12 mandatory). Pass 3 of 4 test cases. Capstone 3.0+ average. Complete 2 peer reviews.</p><p><strong>Master Certification:</strong> Complete all 3 levels. Pass 10 of 12 test cases. Capstone 3.5+. Earns <strong>AI Critical Thinker — Master Certification</strong>.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-cta">
+        <div class="container">
+            <h2>Ready to build AI judgment?</h2>
+            <p>Take the free placement assessment and find your starting level.</p>
+            <div class="cta-actions">
+                <a href="index.html#assessment" class="btn btn-primary btn-lg">Take the Assessment</a>
+                <a href="index.html#pricing" class="btn btn-outline-light btn-lg">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Critical Thinker Bootcamp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+        });
+        // Mobile toggle
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        // Session toggle
+        function toggleSession(btn) {
+            const detail = btn.parentElement;
+            const wasOpen = detail.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.session-detail').forEach(d => d.classList.remove('open'));
+            if (!wasOpen) {
+                detail.classList.add('open');
+                setTimeout(() => detail.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+            }
+        }
+        // Open from URL hash
+        if (window.location.hash) {
+            const el = document.querySelector(window.location.hash);
+            if (el && el.classList.contains('session-detail')) {
+                el.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
